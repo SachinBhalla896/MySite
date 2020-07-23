@@ -1,4 +1,16 @@
 package com.example.Entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(name= "student",
+uniqueConstraints = {
+		@UniqueConstraint(columnNames = "stclass")
+}
+   )
+
 public class Student 
 {
 	private Integer id;
